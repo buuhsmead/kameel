@@ -23,6 +23,8 @@ public class TimerGreeter extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
+
+
         from("timer:hello?delay=10&repeatCount=7")
                 .routeId("timer-greeter")
                 .setBody().constant("Hello World!")
